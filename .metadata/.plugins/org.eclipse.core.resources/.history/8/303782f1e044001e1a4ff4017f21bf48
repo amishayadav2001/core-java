@@ -1,0 +1,12 @@
+package com.aurionpro.model;
+
+public class StringBuffer {
+	
+	    public static void main(String[] args) {
+	        String str = "Hello, ";
+	        String = str + "World!"; 
+	        System.out.println(str);
+	    }
+	}
+
+

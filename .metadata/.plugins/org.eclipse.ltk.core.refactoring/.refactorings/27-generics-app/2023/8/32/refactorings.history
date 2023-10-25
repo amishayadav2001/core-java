@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.aurionpro.model.AddInteger&apos; to &apos;PrintValue&apos;&#x0D;&#x0A;- Original project: &apos;27-generics-app&apos;&#x0D;&#x0A;- Original element: &apos;com.aurionpro.model.AddInteger&apos;&#x0D;&#x0A;- Renamed element: &apos;com.aurionpro.model.PrintValue&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AddInteger&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.aurionpro.model{AddInteger.java[AddInteger" matchStrategy="1" name="PrintValue" qualified="false" references="true" similarDeclarations="false" stamp="1691738280426" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,8 @@
+package com.aurionpro.model;
+
+public class LineItem {
+	private int id;
+	private int quantity;
+	private Product product;
+
+}

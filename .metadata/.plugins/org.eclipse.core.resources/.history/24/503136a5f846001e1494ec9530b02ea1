@@ -1,0 +1,65 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class CustomLinkedList<T> {
+    private List<T> list;
+
+    public CustomLinkedList() {
+        list = new ArrayList<>();
+    }
+
+    // Method to add an element to the end of the list
+    public void add(T element) {
+        list.add(element);
+    }
+
+    // Method to remove the first occurrence of a specific element
+    public boolean remove(T element) {
+        return list.remove(element);
+    }
+
+    // Method to display the elements in the list
+    public void display() {
+        for (T element : list) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
+    // Method to iterate through the list
+    public void iterate() {
+        Iterator<T> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            T element = iterator.next();
+            // Do something with the current element (e.g., print it)
+            System.out.println(element);
+        }
+    }
+
+    public static void main(String[] args) {
+        CustomLinkedList<Integer> customList = new CustomLinkedList<>();
+
+        customList.add(10);
+        customList.add(20);
+        customList.add(30);
+        customList.add(40);
+
+        System.out.println("Displaying elements:");
+        customList.display(); // Output: 10 20 30 40
+
+        System.out.println("Removing element 20:");
+        boolean removed = customList.remove(20);
+        if (removed) {
+            System.out.println("Element 20 removed.");
+        } else {
+            System.out.println("Element 20 not found.");
+        }
+
+        System.out.println("Displaying elements after removal:");
+        customList.display(); // Output: 10 30 40
+
+        System.out.println("Iterating through the list:");
+        customList.iterate();
+    }
+}

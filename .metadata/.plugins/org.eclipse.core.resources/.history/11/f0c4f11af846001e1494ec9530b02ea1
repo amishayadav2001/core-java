@@ -1,0 +1,134 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomLinkedList {
+
+	public static void main(String[] args) {
+		List<Integer> numbers = new ArrayList<>();
+
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(30);
+		numbers.add(40);
+		
+		System.out.println(numbers.size());
+		System.out.println(numbers);
+		
+		System.out.println(numbers.contains(30));
+		
+		numbers.remove(new Integer(10));
+		numbers.remove(1);
+		System.out.println(numbers);
+		
+		//numbers.clear();
+		//System.out.println(numbers);
+		
+		for (Integer number : numbers) {
+		    System.out.println(number);
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+//package com.aurionpro.model;
+//
+//import java.util.Iterator;
+//import java.util.NoSuchElementException;
+//
+//public class CustomLinkedList<T> implements Iterable<T> {
+//
+//    private List<T> start;
+//    private int listSize;
+//
+//    public CustomLinkedList() {
+//        start = null;
+//        listSize = 0;
+//    }
+//
+//    private class List<T> {
+//        T value;
+//        List<T> next;
+//
+//        List(T value) {
+//            this.value = value;
+//            next = null;
+//        }
+//    }
+//
+//    public void add(T value) {
+//        List<T> newList = new List<>(value);
+//        if (start == null) {
+//            start = newList;
+//        } else {
+//            List<T> current = start;
+//            while (current.next != null) {
+//                current = current.next;
+//            }
+//            current.next = newList;
+//        }
+//        listSize++;
+//    }
+//
+//    public void display() {
+//        List<T> current = start;
+//        while (current != null) {
+//            System.out.print(current.value + " ");
+//            current = current.next;
+//        }
+//        System.out.println();
+//    }
+//
+//    public void remove(T value) {
+//        if (start == null) {
+//            return;
+//        }
+//
+//        if (start.value.equals(value)) {
+//            start = start.next;
+//            listSize--;
+//            return;
+//        }
+//
+//        List<T> current = start;
+//        while (current.next != null) {
+//            if (current.next.value.equals(value)) {
+//                current.next = current.next.next;
+//                listSize--;
+//                return;
+//            }
+//            current = current.next;
+//        }
+//    }
+//
+//    @Override
+//    public Iterator<T> iterator() {
+//        return new LinkedListIterator();
+//    }
+//
+//    private class LinkedListIterator implements Iterator<T> {
+//        private List<T> current = start;
+//
+//        @Override
+//        public boolean hasNext() {
+//            return current != null;
+//        }
+//
+//        @Override
+//        public T next() {
+//            if (!hasNext()) {
+//                throw new NoSuchElementException();
+//            }
+//            T value = current.value;
+//            current = current.next;
+//            return value;
+//        }
+//    }
+//}

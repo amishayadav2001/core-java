@@ -1,0 +1,42 @@
+package com.aurionpro.model;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class CustomLinkedList<T> {
+	private List<T> list;
+
+	public CustomLinkedList() {
+		list = new ArrayList<>();
+	}
+
+	// Method to add an element to the end of the list
+	public void add(T element) {
+		list.add(element);
+	}
+
+	// Method to remove the first occurrence of a specific element
+	public boolean remove(T element) {
+		return list.remove(element);
+	}
+
+	// Method to display the elements in the list
+	public void display() {
+		for (T element : list) {
+			System.out.print(element + " ");
+		}
+		System.out.println();
+	}
+
+	// Method to iterate through the list
+	public void iterate() {
+		Iterator<T> iterator = list.iterator();
+		while (iterator.hasNext()) {
+			T element = iterator.next();
+			// Do something with the current element (e.g., print it)
+			System.out.println(element);
+		}
+	}
+
+}
